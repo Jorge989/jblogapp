@@ -1,0 +1,31 @@
+
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao blog de TI</h1>
+  <p class="lead">Este é um BLOG desenvolvido com Node.js + Express + MongoDB.</p>
+  <hr class="my-4">
+  <p></p>
+  <p class="lead">
+  <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+ </p>
+</div>
+
+<hr>
+
+<h2>Postagems recentes: </h2>
+
+{{#each postagen}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+       <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categorias.nome}}</small><br>
+        <small>Conteudo: {{conteudo}}</small><br>
+        <small>Data de publicação: {{data}}</small>
+       
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma Postagem encontrada</h5>
+{{/each}}
